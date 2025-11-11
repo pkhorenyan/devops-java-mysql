@@ -1,0 +1,16 @@
+architecture: replication
+auth:
+  database: mysql_db
+  rootPassword: root-password
+  username: username
+  password: password
+
+secondary:
+  replicaCount: 2
+  persistence:
+    storageClass: "standard"
+
+image:
+  registry: docker.io
+  repository: bitnamilegacy/mysql
+  tag: latest
